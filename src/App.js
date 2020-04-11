@@ -16,24 +16,26 @@ class App extends Component {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(users => this.setState({ monsters: users }))
-
-
   }
 
   render() {
+    const { monsters, searchField } = this.state;
+    const filteredMonsters = monsters.filter(monster =>
+      monster.name.toLowerCase().includes(searchField.toLowerCase())
+      )
     return (
       <div className='App'>
+        <input
+         type="search"
+         placeholder='search monsters'
+         onChange={e => 
+           this.setState({ searchField: e.target.value })}
+         />
         <h1>Monsters Rolodex</h1>
-        <CardList monsters={this.state.monsters}>
-          {
-            this.state.monsters.map(monster => (
-              <h1 key={monster.id}> {monster.name}</h1>))
-          }
-        </CardList>
+        <CardList monsters={filteredMonsters} />
 
       </div>
     );
-  }
-}
+}}
 
 export default App;
