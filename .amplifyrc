@@ -1,0 +1,14 @@
+{
+    "providers": {
+        "awscloudformation": {
+            "AuthRoleName": "monsters-20200411090812-authRole",
+            "UnauthRoleArn": "arn:aws:iam::970529166651:role/monsters-20200411090812-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::970529166651:role/monsters-20200411090812-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "monsters-20200411090812-deployment",
+            "UnauthRoleName": "monsters-20200411090812-unauthRole",
+            "StackName": "monsters-20200411090812",
+            "StackId": "arn:aws:cloudformation:us-west-2:970529166651:stack/monsters-20200411090812/a52456f0-7c0e-11ea-ae16-027d9accbf80"
+        }
+    }
+}
